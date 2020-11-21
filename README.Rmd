@@ -18,15 +18,24 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of Covid19.labor is to ...
+The goal of Covid19.labor is to display how labor of Canada is been effected by Covid19, by using the data that government gave.This will help to show how Canada labor rate is been effected, how the econamy of Canada been changed, will give a warning to government, and at later, will show how econamic change after helping actions. 
 
 ## Installation
 
 You can install the released version of Covid19.labor from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("Covid19.labor")
+require("devtools")
+devtools::installgithub("juliana-chu/Covid19.labor",buildvignettes = TRUE)
+library("Covid19.labor")
 ```
+
+To run the Shiny app:
+
+``` r
+runTestingPackage()
+```
+##Overview##
 
 ## Example
 
@@ -52,3 +61,9 @@ plot(pressure)
 ```
 
 In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+
+##Reference##
+Wickham, H. and Bryan, J. (2019). R Packages (2nd edition). Newton, Massachusetts: O’Reilly Media. https://r-pkgs.org/
+
+##Acknowledge##
+This package was developed as part of an assessment for 2020BCB410H: Applied Bioinformatics, University of Toronto, Toronto,CANADA.
