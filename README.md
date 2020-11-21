@@ -36,33 +36,38 @@ To run the Shiny app:
 runTestingPackage()
 ```
 
-\#\#Overview\#\# Covid19.labor contains 4 functions to demonstrate
-components of a simple R package. The CasePerMonth function shows the
-labor change in the month, where shows how many are employed and how
-many are unemployed. The CaseChangeMonth function shows the labor rate
-change from last month to this month, which will give a percentage about
-how the rate changed. The CaseGraph will provide a graph where have
-graph for the changes for the labor and the case number of Covid19
-provided by government. The runTestingPackage is the function that
-launches the shiny app for this package. The package also contains
-Covid19 Canada dataset Covide19.analysis. Refer to package vignettes for
-more details.
+## Overview
+
+Covid19.labor contains 4 functions to demonstrate components of a simple
+R package. The CasePerMonth function shows the labor change in the
+month, where shows how many are employed and how many are unemployed.
+The CaseChangeMonth function shows the labor rate change from last month
+to this month, which will give a percentage about how the rate changed.
+The CaseGraph will provide a graph where have graph for the changes for
+the labor and the case number of Covid19 provided by government. The
+runTestingPackage is the function that launches the shiny app for this
+package. The package also contains Covid19 Canada dataset
+Covide19.analysis. Refer to package vignettes for more details.
 
 ``` r
 browseVignettes("TestingPackage")
 ```
 
-\#\#Contributions\#\# The author of the package is Juliana Chu. The
-CaseGraph will provide a graph where have graph for the changes for the
-labor and the case number of Covid19 provided by government. This
-function will use the graph from Covid19.analysis R package to generate
-a covid19 cases graph which will combine with labor cases. The
-covid19.analysis package is used for generating an overview of Covid19
-cases in Canada. The covid19\_plts.R functions will be borrowed from
-covid19.analysis package, to generate graph for this R pakage.
+## Contributions
 
-\#\#Reference\#\# Wickham, H. and Bryan, J. (2019). R Packages (2nd
-edition). Newton, Massachusetts: O’Reilly Media. <https://r-pkgs.org/>
+The author of the package is Juliana Chu. The CaseGraph will provide a
+graph where have graph for the changes for the labor and the case number
+of Covid19 provided by government. This function will use the graph from
+Covid19.analysis R package to generate a covid19 cases graph which will
+combine with labor cases. The covid19.analysis package is used for
+generating an overview of Covid19 cases in Canada. The covid19\_plts.R
+functions will be borrowed from covid19.analysis package, to generate
+graph for this R pakage.
+
+## Reference
+
+Wickham, H. and Bryan, J. (2019). R Packages (2nd edition). Newton,
+Massachusetts: O’Reilly Media. <https://r-pkgs.org/>
 
 R Core Team (2020). R: A language and environment for statistical
 computing. R Foundation for Statistical Computing, Vienna, Austria.
@@ -85,6 +90,7 @@ Steipe, B. (2020). RPR-Coding Style. Retrieved October 04, 2020, from
 <http://steipe.biochemistry>.
 utoronto.ca/abc/index.php/RPR-Coding\_style
 
-\#\#Acknowledge\#\# This package was developed as part of an assessment
-for 2020BCB410H: Applied Bioinformatics, University of Toronto,
-Toronto,CANADA.
+## Acknowledge
+
+This package was developed as part of an assessment for 2020BCB410H:
+Applied Bioinformatics, University of Toronto, Toronto,CANADA.
