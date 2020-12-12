@@ -1,12 +1,21 @@
 Package: Covid19.labor
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Covid19 effection on labor in Ontario
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
+Author: person("Juliana", "Chu", email = "juliana.chu@mail.utoronto.ca", role = c("aut", "cre"))
+Maintainer: Juliana Chu<juliana.chu@mail.utoronto.ca>
+Description: 
     Use four spaces when indenting paragraphs within the Description.
 License: MIT + file LICENSE
+URL: https://github.com/juliana-chu/Covid19.labor
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
+Suggests: 
+    shiny
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
+Depends: 
+    R (>= 2.10)
