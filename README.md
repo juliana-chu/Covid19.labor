@@ -7,17 +7,20 @@
 
 <!-- badges: end -->
 
+## Description
+
 Covid19.labor is an R package to demonstrate components of a simple R
 package. This includes the main components: DESCRIPTION, NAMESPACE, man
 subdirectory and R subdirectory. Additionally, licence, README and
 subdirectories vignettes, tests, data and inst are also explored. The
 package is targeted for BCB410H students exploring development of an R
-package in bioinformatics.The goal of Covid19.labor is to display how
-labor of Canada is been effected by Covid19, by using the data that
-government gave.This will help to show how Canada labor rate is been
-effected, how the econamy of Canada been changed, will give a warning to
-government, and at later, will show how econamic change after helping
-actions.
+package in bioinformatics.The goal of Covid19.labor is to display the
+patient who has Covid19 by their Ethno-Racial Group, and their income
+levels by using the data that government gave.This will help to show
+which group of people have a larger chance getting effected.Whether it
+is by behavior, such as working environment, or it is a generic problem,
+where there a gene that might effect individual have a higher chance to
+get effected.
 
 ## Installation
 
@@ -33,36 +36,55 @@ library("Covid19.labor")
 To run the Shiny app:
 
 ``` r
-runTestingPackage()
+runCovid19.labor()
 ```
 
 ## Overview
 
-Covid19.labor contains 4 functions to demonstrate components of a simple
-R package. The CasePerMonth function shows the labor change in the
-month, where shows how many are employed and how many are unemployed.
-The CaseChangeMonth function shows the labor rate change from last month
-to this month, which will give a percentage about how the rate changed.
-The CaseGraph will provide a graph where have graph for the changes for
-the labor and the case number of Covid19 provided by government. The
-runTestingPackage is the function that launches the shiny app for this
-package. The package also contains Covid19 Canada dataset
-Covide19.analysis. Refer to package vignettes for more details.
+Covid19.labor contains 6 functions and a data set to demonstrate
+components of a simple R package. All functions plot a graph, by
+rate/percentage, time period, income/nation group.The data set is from
+City of Toronto, and I have imported them into 7 datasets. The
+runCovid19.labor is the function that launches the shiny app for this
+package. Refer to package vignettes for more details.
+
+*plotERMonthlyCase* Display the distribution of nation by each month in
+rate
+
+![ERmonthlycase](./extradata/ERmonthlycase.png)
+
+*plotERMonthlyCase* Display the distribution of nation by each month in
+percentage ![ERmonthlyper](./extradata/ERmonthyper.png)
+
+*plotERPopCase* Display the distribution of nation in rate
+![](./extradata/ERPcase.png)
+
+*plotERPopPer*Display the distribution of nation in percentage
+![](./extradata/ERPP.png)
+
+*plotIncomeCase* Display the patient by their income in rate
+![](./extradata/incomecase.png)
+
+*plotIncomePer* Display the patient by their income in percentage
+![](./extradata/incomeper.png)
+
+*plotIncMonthyCase*Display the distribution of patient by each month
+income in rate ![](./extradata/IncMonthlycase.png)
+
+*plotIncMonthyPer*Display the distribution of patient by each month
+income in percentage ![](./extradata/IncMonthPer.png)
+
+## Tutorials
 
 ``` r
-browseVignettes("TestingPackage")
+browseVignettes("Covid19.labor")
 ```
 
 ## Contributions
 
-The author of the package is Juliana Chu. The CaseGraph will provide a
-graph where have graph for the changes for the labor and the case number
-of Covid19 provided by government. This function will use the graph from
-Covid19.analysis R package to generate a covid19 cases graph which will
-combine with labor cases. The covid19.analysis package is used for
-generating an overview of Covid19 cases in Canada. The covid19\_plts.R
-functions will be borrowed from covid19.analysis package, to generate
-graph for this R pakage.
+The author of the package is Juliana Chu. The ggplot package is used to
+produce plot visualizations. The R shiny package was used to create the
+Shiny app.
 
 ## Reference
 
@@ -89,6 +111,10 @@ Retrieved October 27, 2020, from
 Steipe, B. (2020). RPR-Coding Style. Retrieved October 04, 2020, from
 <http://steipe.biochemistry>.
 utoronto.ca/abc/index.php/RPR-Coding\_style
+
+City of Toronto.(2020).COVID-19: Status of Cases in Toronto.Retrivied
+December.10, 2020, from
+<https://www.toronto.ca/home/covid-19/covid-19-latest-city-of-toronto-news/covid-19-status-of-cases-in-toronto/>
 
 ## Acknowledge
 
