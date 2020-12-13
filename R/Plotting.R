@@ -1,5 +1,15 @@
-
-
+#'plot the cases by percentage happened from August 2020 to October 2020
+#'
+#'a function that visualized the data of ERMonthlyCase in to a line graph,
+#'differences by month.
+#'
+#' @return plot that shows the cases happen each month from August to September,
+#' group by their Ethno-Racial Group
+#'
+#'@examples
+#'Plot the data to visualize the overall graph
+#'plotERMonthlyCase()
+#'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical
 #' computing. R Foundation for Statistical Computing, Vienna,
@@ -25,7 +35,7 @@ plotERMonthlyCase  <-function(Group,sex = ALL){
 #'
 #'@examples
 #'Plot the data to visualize the overall graph
-#'plotERMonthlyPer <-function()
+#'plotERMonthlyPer()
 #'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical
@@ -65,11 +75,20 @@ plotERMonthlyPer <-function(){
 #'@export
 #'@import ggplot2
 plotERPopCase <-function(){
-  ggplot(ERPopCase, aes(x = `Sex`,
-                        y = `Reported COVID-19 infection rate`,group =`Ethno-Racial Group`)) + geom_bar(stat = "identity")
-
-#' plot the cases reported in ERPopPer by sex into histagram.
+  ggplot(ERPopCase, aes(x = `Ethno-Racial Group`,
+                        y = `Reported COVID-19 infection rate`,fill = Sex)) +
+    facet_grid(Sex ~ .)+ geom_bar(stat = "identity")
+}
+#' plot the ERPopCase data by sex into three histagram.
 #'
+#' A function that use ERPopCase data into three histagram, in each histagram,
+#' it is divide by Ethon-Racial Group to show what is the percentage for getting
+#' Covid 19.
+#'
+#' @return a plot contain three histagram to show the cases that got effected by percentage.
+#'
+#' @example
+#' plotERPopPer()
 #'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical
@@ -86,7 +105,17 @@ plotERPopPer <-function(){
                        y = `Count of COVID-19 cases`,fill = Sex)) +
     facet_grid(Sex ~ .)+ geom_bar(stat = "identity")
 }
+#'#'plot the cases by income with percentage happened from August 2020 to October 2020
 #'
+#'a function that visualized the data of IncomeCase in to a line graph,
+#'differences by month.
+#'
+#' @return plot that shows the cases happen in total from August to September,
+#' group by their income
+#'
+#'@examples
+#'Plot the data to visualize the overall graph
+#'plotIncomeCase()
 #'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical
@@ -103,7 +132,16 @@ plotIncomeCase <-function(){
                          y =`Reported COVID-19 infection rate`,
                          group=`Age group`,color=`Age group`))+ geom_line()
 }
+#'#'plot the cases by income with percentage happened from August 2020 to October 2020
 #'
+#'a function that visualized the data of IncMonthlyPer in to a line graph,
+#'differences by month.
+#'
+#' @return plot that shows the cases happen in total by their income
+#'
+#'@examples
+#'Plot the data to visualize the overall graph
+#'plotIncomePer <-function()
 #'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical
@@ -119,6 +157,18 @@ plotIncomePer <- function(){
   ggplot(IncomePer, aes(x = `Income group`,y =`Count of COVID-19 Cases`,
                         group=`Age group`,color=`Age group`))+ geom_line()
 }
+#'plot the cases by income with rate happened from August 2020 to October 2020
+#'
+#'a function that visualized the data of IncMonthlyCase in to a line graph,
+#'differences by month.
+#'
+#' @return plot that shows the cases happen each month from August to September,
+#' group by their income
+#'
+#'@examples
+#'Plot the data to visualize the overall graph
+#'plotIncMonthlycase()
+#'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical
 #' computing. R Foundation for Statistical Computing, Vienna,
@@ -132,10 +182,22 @@ plotIncomePer <- function(){
 plotIncMonthyCase <-function(Month){
     ggplot(IncomeMonthlyCasee, aes(x = `Month`,
                                    y =`Reported COVID-19 infection rate`,
-                                   group=`Income group`, color=`Income group`))
-    +geom_line()
+                                   group=`Income group`,
+                                   color=`Income group`))+ geom_line()
 
 }
+#'plot the cases by income with percentage happened from August 2020 to October 2020
+#'
+#'a function that visualized the data of IncMonthlyPer in to a line graph,
+#'differences by month.
+#'
+#' @return plot that shows the cases happen each month from August to September,
+#' group by their income
+#'
+#'@examples
+#'Plot the data to visualize the overall graph
+#'plotIncMonthlyPer()
+#'
 #' @references
 #' R Core Team (2020). R: A language and environment for statistical
 #' computing. R Foundation for Statistical Computing, Vienna,
@@ -146,10 +208,11 @@ plotIncMonthyCase <-function(Month){
 #'
 #'@export
 #'@import ggplot2
-plotIncMonthyPer <-function(){
-  ggplot(IncomeMonthlyPer, aes(x = `Month`,y =`Count of COVID-19 cases`,
-                               group=`Income group`, color=`Income group`))+
-    geom_line()
+plotIncMonthlyPer <-function(){
+  ggplot(IncomeMonthlyPer, aes(x = `Month`,
+                               y =`Count of COVID-19 cases`,
+                               group=`Income group`,
+                               color=`Income group`)) + geom_line()
 }
 
 
