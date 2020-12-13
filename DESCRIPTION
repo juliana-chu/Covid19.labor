@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: person("Juliana", "Chu", email = "juliana.chu@mail.utoronto.ca", role = c("aut", "cre"))
 Maintainer: Juliana Chu<juliana.chu@mail.utoronto.ca>
 Description: 
-    Use four spaces when indenting paragraphs within the Description.
+Covid19.labor is an R package to demonstrate components of a simple R package. The package is targeted for BCB410H students exploring development of an R package in bioinformatics.The goal of Covid19.labor is to display the patient  who has Covid19 by their Ethno-Racial Group, and their income levels by using the data that government gave.This will help to show which group of people have a larger chance getting effected.Whether it is by behavior, such as working environment, or  it is a generic problem, where there a gene that might effect individual have a higher chance to get effected. 
 License: MIT + file LICENSE
 URL: https://github.com/juliana-chu/Covid19.labor
 Encoding: UTF-8

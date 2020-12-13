@@ -16,7 +16,7 @@
 #'
 #' @export
 #' @importFrom shiny runApp
-runCovid19.labor <- function() {
+runCovid19_labor <- function() {
   appDir <- system.file("shiny-script",package = "Covid19.labor")
   shiny::runApp(appDir, display.mode = "normal")
   return()
